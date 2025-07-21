@@ -42,7 +42,7 @@ const ResearchJobsSchema : Schema<ResearchJobs> = new mongoose.Schema<ResearchJo
     finalContentId : {
         type : mongoose.Schema.Types.ObjectId,
         required : false,
-        ref : "FinalContent"
+        ref : "GeneratedContent"
     }
 },
 {

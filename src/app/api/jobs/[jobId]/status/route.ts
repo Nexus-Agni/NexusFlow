@@ -19,8 +19,8 @@ export async function GET(request:Request,
         }
     
         const userId = session.user.id;
-    
-        const job = await ResearchJobs.findOne({userId, _id : params.jobId});
+        const {jobId} = await params;
+        const job = await ResearchJobs.findOne({userId, _id : jobId});
         if (!job) {
             return Response.json({
                 success : false,
